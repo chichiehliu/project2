@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="css/guest.css" rel="stylesheet" type="text/css">
+    <meta charset="UTF-8">
+    <link href="images/fa-ico.ico" rel="short icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script language="javascript" src="jquery-3.3.1.min.js"></script>
+    <title>Document</title>
+    <script lang="javascipt">
+        $(document).ready(function(){
+            
+        
+        $("#btn").click(function(){
+                $.post("guest.php",{
+                id:$("#id2").val(),
+				pwd:$("#pwd").val(),
+				uname:$("#uname").val(),
+				birdate:$("#birdate").val(),
+                email:$("#email").val()},
+                function (d,s)
+                {
+                    alert("恭喜您已成功加入會員"+s);
+                    alert("恭喜您已成功加入會員"+id);
+                    
+                });
+    });
+});    
+    </script>
+</head>
+
+<body>
+        <center> 
+            <img src="images/logo02.png">
+            <table>
+            
+            <tr><td>帳號：</td>
+                <td><input type="email" placeholder="帳號" id="id2" name="id"></td>
+            </tr>
+            <tr><td>密碼：</td>
+                <td><input type="password" placeholder="密碼" id="pwd" name="pwd"></td>
+            </tr>
+            <tr><td>姓名：</td>
+                <td><input type="text" placeholder="姓名" id="uname" name="uname"></td>
+            </tr>
+            <tr><td>生日：</td>
+                <td><input type="text" placeholder="生日" id="birdate" name="birdate"></td>
+            </tr>
+            <tr><td>信箱：</td>
+                <td><input type="text" placeholder="信箱" id="email" name="email"></td>
+            </tr>
+            <tr><td colspan="2"><input type="button" value="註冊" id="btn" name="btn"></td>
+            </tr>
+            </tr>
+            <tr><td colspan="2"><a href="localhost.html" id="home"><img src="images/ICON02_2.png">點我回首頁</a></td></tr>
+        
+            </table>
+        </center> 
+        
+</body>
+</html>

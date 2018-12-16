@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="css/basic.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 待補 -->
+    <link href="images/fa-ico.ico" rel="short icon">
+    <link href="css/style_m.css" rel="stylesheet" type="text/css" media="(min-width:600px) and (max-width:979px)">
+    <link href="css/style_s.css" rel="stylesheet" type="text/css" media="(max-width:599px)">
+    <script language="javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script language="javascript" src="js/pick.js"></script>
+    <script language="javascript" src="js/ulli.js"></script>
+    <script language="javascript" src="js/drop.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>FF-少女前線</title>
+  </head>
+    <script>
+    $(document).ready(function() {
+      // JS SDK
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId: "2211438659070058",
+          cookie: true,
+          xfbml: true,
+          version: "v3.2"
+        });
+        FB.AppEvents.logPageView();
+      };
+      // 檢查登入狀態
+      FB.getLoginStatus(function(response) {
+        statusChangeCallback(response);
+      });
+      // 新增「Facebook 登入」按鈕
+      <fb:login-button
+        scope="public_profile,email"
+        onlogin="checkLoginState();"
+      />;
+    });
+  </script>
+
+  <body>
+    <div id="fb-root"></div>
+    <script>
+      (function(d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src =
+          "https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v3.2&appId=2211438659070058&autoLogAppEvents=1";
+        fjs.parentNode.insertBefore(js, fjs);
+      })(document, "script", "facebook-jssdk");
+    </script>
+    <div id="container">
+        <div id="nav">
+            <div id="nav-bar">
+              <div>
+              <ul id="cli_m0">
+                會員專區
+                <ol id="m0" class="m">
+                  <li><a href="guest.html">會員帳號申請</a></li>
+                  <li><a href="#">會員資料更改</a></li>
+                  <li><a href="#">會員問答專區</a></li>
+                </ol>
+              </ul>
+            </div>
+            <div>        
+              <ul id="cli_m1">
+                連絡我們
+                <ol id="m1" class="m">
+                <li><a href="#">問題反應</a></li>
+                <li><a href="#">相關問題</a></li>
+                <li><a href="#">合作接洽</a></li>
+              </ol>
+              </ul>
+              </div>
+            </div>
+          </div>
+
+
+      <div id="headf">
+        <img src="images/bannerdback.jpg" id="h1" />
+      </div>
+      
+      <div id="content">
+        <div id="ct-ph">
+          <span><img src="images/apple (1).png"><input
+            type="radio"
+            value="ios" name="ph-btn"
+          />ios預約</span>&nbsp;&nbsp;&nbsp;&nbsp;<span><img src="images/android (1).png"><input
+            type="radio"
+            value="andriod" name="ph-btn"
+          />andriod預約</span>
+        <h4><span>
+            手機事前登陸：<input type="text" id="phone" />&nbsp;&nbsp;&nbsp;<button
+              type="submit"
+              id="bt-ph">
+              立即登陸
+            </button></h4></span>
+        </div>
+          <!-- FB login -->
+          <div
+            class="fb-login-button"
+            data-max-rows="1"
+            data-size="large"
+            data-button-type="continue_with"
+            data-show-faces="false"
+            data-auto-logout-link="true"
+            data-use-continue-as="false"
+          >
+        </div>
+        <div id="share">
+          <button><img src="images/facebook.png"></button> <button><img src="images/twitter.png"></button> <button><img src="images/instagram.png"></button>
+        </div>
+      </div>
+      </div>
+      <div id="main-mix">
+        <img src="images/p1.png" id="img1">
+      </div>
+      <div id="main">
+        <p><img src="images/PP03.gif">拖曳放置您要合成的素材<img src="images/PP02.gif"></p>
+        <div id="main-drop">
+          <!-- 合成拖曳BAR -->
+          <div
+            id="drop1"
+            ondrop="drop(event)"
+            ondragover="allowDrop(event)"
+          ></div>
+          <div
+            id="drop2"
+            ondrop="drop(event)"
+            ondragover="allowDrop(event)"
+          ></div>
+          <div
+            id="drop3"
+            ondrop="drop(event)"
+            ondragover="allowDrop(event)"
+          ></div>
+        </div>
+        <br />
+
+        <div id="main-drag">
+          <div id="dr1">
+            <img
+              id="drag1"
+              src="images/ch1.png"
+              draggable="true"
+              ondragstart="drag(event)"
+            />
+          </div>
+          <div id="dr2">
+            <img
+              id="drag2"
+              src="images/ch2.png"
+              draggable="true"
+              ondragstart="drag(event)"
+            />
+          </div>
+          <div id="dr3">
+            <img
+              id="drag3"
+              src="images/ch3.png"
+              draggable="true"
+              ondragstart="drag(event)"
+            />
+          </div>
+          <div id="dr4">
+            <img
+              id="drag4"
+              src="images/ch4.png"
+              draggable="true"
+              ondragstart="drag(event)"
+            />
+          </div>
+          <div id="dr5">
+            <img
+              id="drag5"
+              src="images/ch5.png"
+              draggable="true"
+              ondragstart="drag(event)"
+            />
+          </div>
+          <div id="dr6">
+            <img
+              id="drag6"
+              src="images/ch6.png"
+              draggable="true"
+              ondragstart="drag(event)"
+            />
+          </div>
+          <div id="dr7">
+            <img
+              id="drag7"
+              src="images/ch7.png"
+              draggable="true"
+              ondragstart="drag(event)"
+            />
+          </div>
+          <div id="dr8">
+            <img
+              id="drag8"
+              src="images/ch8.png"
+              draggable="true"
+              ondragstart="drag(event)"
+            />
+          </div>
+          <div id="dr9">
+            <img
+              id="drag9"
+              src="images/ch9.png"
+              draggable="true"
+              ondragstart="drag(event)"
+            />
+          </div>
+        </div>
+        <div id="keep">
+          <input type="submit" value="暫存" onclick="dfun2()"/>
+          <input type="button" value="重置" onclick="dfun1()"/>
+        </div>
+      </div>
+      <div id="check">
+        <div id="ck-in"><input type="button" value="最後確認"  id="bbt1" onclick="dfun3()"/></div>
+        <div id="bar"></div>
+        <div id="heart">
+          <img src="images/heart1.png" /> <img src="images/heart1.png" />
+          <img src="images/heart1.png" />
+        </div>
+      </div>
+      <div id="footer"><p>copyright&copy;by:FF-少女前線</p></div>
+    </div>
+  </body>
+</html>

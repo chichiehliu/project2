@@ -1,0 +1,43 @@
+@charset "utf-8";
+/* 基本版面架構 */
+html, body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    color:rgb(33, 39, 66);
+    background-color: rgb(33, 39, 66,0.3);
+}
+body {
+    font-family: "微軟正黑體", sans-serif;
+    font-weight:normal;
+    line-height: 1.5;
+    font-size: 100%;
+    word-wrap: break-word;
+    -webkit-text-size-adjust: none;
+    text-align: center;
+
+}
+h1, h2, h3, p, div, a, table, th, td, ul, li, small {
+    margin:0;
+    padding:0;
+    line-height:1;
+    font-weight:normal;
+    text-decoration: none;
+}
+table{
+    margin: 10px;
+    padding: 20px;
+}
+
+td input{
+    background-color: rgba(226, 226, 226, 0.76);
+    box-shadow: #ffffff;
+    border-radius:50px;
+    float: right;
+    margin: 2px;
+    padding: 2px;
+}
+#home{
+    float: left;
+}
+/* 基本版面架構結束 */
